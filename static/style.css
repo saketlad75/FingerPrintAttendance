@@ -1,0 +1,19 @@
+.bg-nav{
+    background: #4AC29A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BDFFF3, #4AC29A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BDFFF3, #4AC29A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.mt-50{
+    magin-top=100px;
+}
+.center-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Set the container height to full viewport height */
+}
+ .logo {
+        max-width: 150px; /* Adjust the max-width as needed */
+        margin-bottom: 20px; /* Add spacing between the logo and form */
+ }

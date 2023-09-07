@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css" integrity="sha384-PRrgQVJ8NNHGieOA1grGdCTIt4h21CzJs6SnWH4YMQ6G5F5+IEzOHz67L4SQaF0o" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <title></title>
+    <style>
+      /* Custom CSS to center the form */
+      .center-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Added to align items vertically */
+        height: 100vh; /* Set the container height to full viewport height */
+      }
+
+      /* Custom CSS for the logo */
+      .logo {
+        max-width: 150px; /* Adjust the max-width as needed */
+        margin-bottom: 20px; /* Add spacing between the logo and form */
+      }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <div class="center-form">
+      <img src="{{url_for('static',filename='SPIT_Logo.png')}}" alt="SPIT Logo" class="logo">
+      <h2>Attendance System</h2> <!-- Added the heading here -->
+      <div class="col-md-4">
+        <div class="card mt-100">
+          <div class="card-body">
+            <form class="form" method="post" action="/login_validation">
+              <label>Email</label><br>
+              <input type="email" class="form-control" name="email"><br>
+              <label>Password</label>
+              <input type="password" class="form-control" name="password"><br><br>
+              <input type="submit" class="btn btn-primary btn-block btn-lh" value="Login">
+            </form>
+            <p class="mt-4">
+              Not a Member? <a href="/register">Create Account</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
