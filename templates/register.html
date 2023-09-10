@@ -27,12 +27,15 @@
     <div class="form-container">
         <img src="{{url_for('static',filename='SPIT_Logo.png')}}" alt="SPIT Logo" class="logo">
         <h1>Registration Form</h1>
-        <form action="process_registration.php" method="post">
+        <form class = "form" method="post" action="/register">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
 
-            <label for="uid">UID:</label>
+            <label for="uid">Faculty ID:</label>
             <input type="text" id="uid" name="uid" required><br><br>
+
+            <label>Email:</label>
+            <input type="email" class="form-control" name="email" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required><br><br>
