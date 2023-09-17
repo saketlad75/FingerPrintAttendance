@@ -25,17 +25,17 @@
 </head>
 <body>
     <div class="form-container">
-        <img src="{{url_for('static',filename='SPIT_Logo.png')}}" alt="SPIT Logo" class="logo">
+        <img src="{{url_for('static', filename='SPIT_Logo.png')}}" alt="SPIT Logo" class="college-logo">
         <h1>Registration Form</h1>
-        <form class = "form" method="post" action="/register">
+        <form class="form" method="post" action="/register">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
 
-            <label for="uid">Faculty ID:</label>
-            <input type="text" id="uid" name="uid" required><br><br>
+            <label for="faculty_id">Faculty ID:</label>
+            <input type="text" id="faculty_id" name="faculty_id" required><br><br>
 
-            <label>Email:</label>
-            <input type="email" class="form-control" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required><br><br>
