@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACULTY DASHBOARD</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add custom CSS for beautification -->
+    <style>
+        .logo {
+            max-width: 150px; /* Adjust the size of the logo as needed */
+            background-color: white; /* Set the background behind the logo to white */
+            padding: 10px; /* Add some padding for better separation */
+        }
+        .card {
+            border: 1px solid rgb(223, 221, 221); /* Add a border to the cards */
+            border-radius: 15px; /* Round the card corners */
+        }
+        .department {
+            padding: 20px;
+        }
+        .btn-primary, .btn-secondary {
+            margin-right: 10px;
+        }
+        .card-title {
+            color: #007BFF;
+            font-size: 24px;
+        }
+        .list-group-item {
+            font-size: 18px;
+        }
+        .header {
+            background-color: white; /* Set the background of the header to white */
+        }
+        .header h1 {
+            background-color: #760000;
+            color: white;
+            font-weight: bold; /* Make the "FACULTY DASHBOARD" text bold */
+            text-transform: uppercase; /* Convert text to uppercase */
+        }
+    </style>
+</head>
+<body>
+    <header class="header text-dark text-center py-4">
+        <!-- Add the college logo -->
+        <img src="{{url_for('static',filename='SPIT_Logo.png')}}" alt="SPIT Logo" class="logo">
+        <h1 class="mt-2">FACULTY DASHBOARD</h1>
+    </header>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Courses</h2>
+                        <div id="department1" class="department">
+                            <h3>Electronics and Telecommunication Engineering (EXTC)</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">BEE-101 - Basic Electrical Engineering</li>
+                                <li class="list-group-item">CS-104 - Control Systems</li>
+                                <!-- Add more courses for this department -->
+                            </ul>
+                            <button class="btn btn-primary mt-2" onclick="takeAttendance('BEE101')">Take Attendance</button>
+                            <button class="btn btn-secondary mt-2" onclick="viewAttendance('BEE101')">View Attendance</button>
+                        </div>
+                        <!-- Add more department sections with courses and division selection -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

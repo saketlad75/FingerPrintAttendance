@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        /* Center-align the form container */
+        .form-container {
+            text-align: center;
+            margin: 0 auto;
+            width: 300px; /* Adjust the width as needed */
+            padding: 20px; /* Add padding for spacing */
+        }
+        /* Style the college logo */
+        .college-logo {
+            display: block;
+            margin: 0 auto;
+            width: 200px; /* Adjust the width as needed */
+            height: 200px; /* Adjust the height as needed */
+        }
+        /* Style labels and inputs */
+        label, select, input {
+            display: block;
+            margin: 10px 0;
+            width: 100%; /* Expand inputs to fill the container */
+        }
+        /* Center-align the tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+        }
+        .tab {
+            margin: 0 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="{{url_for('static',filename='SPIT_Logo.png')}}" alt="SPIT Logo" class="logo">
+        <h1>Registration Form</h1>
+        <form class = "form" action="/register" method="post">
+            <div class="input-container">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="input-container">
+                <label for="uid">User ID:</label>
+                <input type="text" id="uid" name="uid" required>
+            </div>
+
+            <div class="input-container">
+                <label for="department">Department:</label>
+                <select id="department" name="department" required>
+                    <option value="CE">CE</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ETRX">ETRX</option>
+                    <option value="EXTC">EXTC</option>
+                    <option value="MCA">MCA</option>
+                    <!-- Add more department options as needed -->
+                </select>
+            </div>
+
+            <div class="input-container">
+                <label for="email">Email Id:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="input-container">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
